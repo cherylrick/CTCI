@@ -1,3 +1,5 @@
+package ArraysAndStrings;
+
 import java.util.*;
 /**
  * Created by nithyapari on 7/13/15.

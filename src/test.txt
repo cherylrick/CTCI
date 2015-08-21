@@ -1,0 +1,23 @@
+
+public int countPairsDiffTwo(){
+
+int[] numbArray = {1, 7, 5, 9, 2, 12, 3};
+int diff = 2;
+int pairCount = 0;
+
+//Create a HashMap from Array
+HashMap<Integer> numbers = new HashMap<Integer>();
+for(int num : numArray){
+ numbers.put(num);
+}
+
+//Checking if num + diff or num - diff is present in the HashMap
+for(int num : numArray){
+ if(numbers.contains(num + diff) || numbers.contains(num - diff)) {
+   pairCount++;
+ }
+}
+
+return pairCount;
+
+}

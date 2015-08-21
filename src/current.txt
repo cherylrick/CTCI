@@ -1,0 +1,56 @@
+Given an array of integers, can you find the most frequent integer in the array?
+
+Example:
+[23927192214]
+
+Output:
+2
+
+Answer:
+
+import java.io.*;
+
+public class FreqInteger {
+
+//Method using multiple Arrays
+public int frequentInteger(int[] input) {
+
+  int inputLength = input.length; //5
+  int inputMax = input[0];
+
+  for(int l=1; l<inputLength; l++) {
+     if(input[l] > inputMax) {
+       inputMax = input[j];
+     }
+  }
+
+  int count[] = new int[inputMax];
+
+  for(int i=0; i<inputLength; i++) {
+    count [input[i]]++;
+  }// count => 1 - 1, 2 -2, 3 - 1, 4 -1 Count Array = [0,1,2,1,1]
+
+  int countLength = count.length; // 4
+  int curMaxIndex = 0;
+  int curMax = count[curMaxIndex]; //0
+
+  for(int j=1; j<countLength; j++) {
+     if(count[j] > curMax) {
+       curMaxIndex = j;
+       curMax = count[j];
+     }
+  }
+
+  return curMaxIndex;
+}
+
+//Method not using any additional data structure and only one iteration
+public int
+
+public static void main(String[] args) {
+
+  int[] input = {1,2,3,4,2};
+  FreqInteger freqIntegerObject = new FreqInteger();
+  System.out.println("Frequent Integer: "+freqIntegerObject.frequentInteger(input));
+}
+}

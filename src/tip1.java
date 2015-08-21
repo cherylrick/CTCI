@@ -4,7 +4,6 @@ import java.util.*;
  */
 public class tip1 {
 
-
     public int countPairsDiffTwo(){
 
         int[] numArray = {1, 3, 5, 7};
@@ -20,13 +19,10 @@ public class tip1 {
 //Checking if num + diff or num - diff is present in the HashMap
         for(int num : numArray){
             if(numbers.containsKey(num + diff) || numbers.containsKey(num - diff)) {
-
                 pairCount++;
             }
         }
-
         return pairCount;
-
     }
 
     public static void main(String[] args) {

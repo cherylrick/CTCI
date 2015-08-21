@@ -1,0 +1,125 @@
+Given a linked list, write a function to reverse it.
+
+Example
+
+Input: A -> B -> C -> D
+
+Output: D -> C -> B -> A
+
+My Idea:
+-------
+
+Insert it into a stack
+Retrieve it and create a linked list
+
+Answer:
+------
+
+class Node {
+
+   int val;
+   Node next = null;
+
+   public Node(Char v, Node n) {
+        val = v;
+        next = n;
+   }
+
+}
+
+//Creating a Stack Structure - Last In First Out(LIFO)
+// Example A, B, C, D
+class Stack {
+
+   static Node headS = null;
+   Node temp = null;
+
+   public void push(Node n) {
+
+   if(headS == null) {
+      headS = n;
+      headS.next = null;
+   }
+   else {
+
+      temp = n;
+      temp.next = headS;
+      headS = temp;
+   }
+
+   }
+
+   public Node pop() {
+
+    if(headS == null) {
+       return null; //Empty Stack
+    }
+    else {
+       temp = headS.next;
+       headS = headS.next.next;
+
+       return temp;
+    }
+   }
+
+}
+
+public class ReverseLinkedList {
+
+ //Creating a Base Linked List
+   Node A = new Node('A', null);
+   Node B = new Node('B', null);
+   Node C = new Node('C', null);
+   Node D = new Node('D', null);
+
+   A.next = B;
+   B.next = C;
+   C.next = D;
+   D.next = null;
+
+   //Head
+   static Node head = A;
+   static Node newHead = null;
+
+   public static void main(String[] args) {
+
+   ReverseLinkedList obj = new ReverseLinkedList();
+   obj.reverse(head);
+
+   }
+
+   public void reverse(Node head) {
+
+   //Creating a Stack
+   Stack stk = new Stack();
+
+   //Pushing into the stack
+   while(head != null) {
+      stk.push(head);
+      head = head.next;
+   }
+
+   //Creating reversed Linked List
+
+   //Checking it this is a empty list, if so pop and make it
+   if(newHead == null) {
+      //pop the stack
+      newHead = stk.pop();
+      newHead.next = null;
+   }
+
+   if(newHead.next == null) {
+   Node temp = stk.pop();
+   newHead.next = temp;
+   }
+   else {
+      do{
+          newHead = newHead.next;
+      }while(newHead.next != null);
+      newHead.next = temp;
+   }
+
+
+   }
+
+}

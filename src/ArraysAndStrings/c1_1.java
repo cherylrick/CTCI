@@ -1,5 +1,6 @@
+package ArraysAndStrings;
+
 import java.util.HashMap;
-import java.io.*;
 
 /**
  * Created by nithyapari on 7/12/15.
@@ -49,12 +50,5 @@ public class c1_1 {
             System.out.println("RESULT: String is Unique");
         }
     }
-
-
-
-
-
-
-
 
 }
