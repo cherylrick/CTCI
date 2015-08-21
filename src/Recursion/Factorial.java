@@ -15,13 +15,15 @@ public class Factorial {
     *
     */
 
-    /*
-    *  Test Cases - Throw error messages
-    *  --------------------------------
-    *  If number is empty
-    *  If number is negative
-    *
-    *
+    /* Pseudocode:
+     *   Check if input number n is 1 or 0 and if yes, return 1 // 0! = 1! = 1
+     *  Else recursively call the same function with value (n-1) and multiply the return value by n
+
+     * Time Complexity:
+       O(n)
+
+     * Space Complexity:
+       O(1)
     */
 
     int factorial(int inputNumber){
