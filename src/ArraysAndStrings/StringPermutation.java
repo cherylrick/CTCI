@@ -5,7 +5,7 @@ import java.util.*;
  * Created by nithyapari on 7/13/15.
  * Q2) Check Permutation: Given two strings, write a method to decide if one is a permutation of the other.
  */
-public class c1_2 {
+public class StringPermutation {
 
     public int isPermutation(String input1, String input2) {
 
@@ -33,7 +33,7 @@ public class c1_2 {
     {
         String input1 = new String("gods");
         String input2 = new String("dog");
-        c1_2 obj = new c1_2();
+        StringPermutation obj = new StringPermutation();
 
         if(obj.isPermutation(input1, input2)==-1){
             System.out.println("RESULT: Not Permutation");

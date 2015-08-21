@@ -6,7 +6,7 @@ import java.util.HashMap;
  * Created by nithyapari on 7/12/15.
  * Writing a method to find if a string is unique
  */
-public class c1_1 {
+public class UniqueString {
 
 
     public int isUnique(String input) {
@@ -41,7 +41,7 @@ public class c1_1 {
     public static void main(String[] args)
     {
         String input = new String("Helo");
-        c1_1 obj = new c1_1();
+        UniqueString obj = new UniqueString();
 
         if(obj.isUnique(input)==-1){
          System.out.println("RESULT: String not Unique");
