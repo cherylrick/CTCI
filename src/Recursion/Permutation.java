@@ -47,6 +47,9 @@ public class Permutation {
                 //After printing the permutation, return back and set the last character as not used now
                 usedLetter[i] = false;
 
+                int newLength = output.length() - 1;
+                output.setLength(newLength);
+
             }
 
         }
