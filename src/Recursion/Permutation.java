@@ -4,6 +4,13 @@ package Recursion;
 /**
  * Created by nithyapari on 8/17/15.
  */
+
+/**
+ * Pseudocode
+ * 1.
+ *
+ *
+ */
 public class Permutation {
 
     static String input = "abc";
