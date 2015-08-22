@@ -20,8 +20,8 @@ package Recursion;
 import java.util.Scanner;
 
 /**
- * Time Complexity:
- * Space Complexity:
+ * Time Complexity: O(2^n)
+ * Space Complexity: O(1)
  */
 public class Fibonacci {
 
@@ -40,7 +40,6 @@ public class Fibonacci {
     }
 
     int fibonacci(int number){
-
         if(number == 0)
             return 0;
         else if(number == 1)
