@@ -13,7 +13,7 @@
         1. These are exceptional conditions that a well-written **application should anticipate and recover from**.
         2. Checked exceptions are **subject** to the _Catch or Specify Requirement_. 
         3. All exceptions are checked exceptions, **except** for those **indicated by Error**, **RuntimeException**, and **their subclasses**.
-        4. Example: **java.io.FileNotFoundException** is thrown when a user enters a file name that does not exist in the file system.
+        4. Example: **java.io.FileNotFoundException** is thrown when a user enters a file name that does not exist in the file system. 
     2. **Error**
         1. These are **unchecked exceptions**. 
         2. These are exceptional conditions that are **external to the application**, and that the **application usually cannot anticipate or recover from**.
@@ -28,6 +28,13 @@
         4. Runtime exceptions are are **not subject** to the _Catch or Specify Requirement_. 
         5. Runtime exceptions are those indicated by RuntimeException and its subclasses.
         6. These usually indicate programming bugs, such as logic errors or improper use of an API. 
-        7. Example: **NullPointerException** is thrown when null is passed to a constructor.
-        
+        7. Example: **NullPointerException** is thrown when null is passed to a constructor. **IndexOutOfBoundsException** is thrown when a program tries to access an out of bounds index in an Array.
+8. Exception handlers are written using three components: **try**, **catch**, and **finally blocks**
+9. The code that might thrown an exception should be enclosed within a **try** block.
+10. The **catch** block is used to associate an exception handler with a try block. 
+    1. One or more catch blocks are placed right after the try block.
+    2. No code can be between the end of the try block and the beginning of the first catch block.
+    3. The catch block contains code that is executed if and when the exception handler is invoked. The catch block has the argument of syntax **'ExceptionType name'**.
+        1. The argument type, **ExceptionType**, declares the type of exception that the handler can handle and must be the name of a class that inherits from the Throwable class. 
+        2. The handler can refer to the exception with **name**.
         
