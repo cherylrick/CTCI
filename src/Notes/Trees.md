@@ -11,31 +11,31 @@
         1.There are cycles in the structure
         2.There are disconnected components in the structure
 9.  Real Life Examples of Tree Structure
-        1. File System in a Computer
-        2. Social Networks
-        3. PDF files
-        4. Computer Chess game
-        5. XML Parser
+    1. File System in a Computer
+    2. Social Networks
+    3. PDF files
+    4. Computer Chess game
+    5. XML Parser
 10. Terminologies in Tree
-        1. Root – The top node in a tree.
-        2. Parent – The converse notion of child.
-        3. Siblings – Nodes with the same parent.
-        4. Descendant – a node reachable by repeated proceeding from parent to child.
-        5. Ancestor – a node reachable by repeated proceeding from child to parent.
-        6. Leaf – a node with no children.
-        7. Internal node – a node with at least one child.
-        8. External node – a node with no children.
-        9. Degree – number of sub trees of a node.
-        10. Edge – connection between one node to another.
-        11. Path – a sequence of nodes and edges connecting a node with a descendant.
-        12. Level – The level of a node is defined by 1 + the number of connections between the node and the root.
-        14. Height of tree –The height of a tree is the number of edges on the longest downward path between the root and a leaf.
-        15. Height of node –The height of a node is the number of edges on the longest downward path between that node and a leaf.
-        16. Depth –The depth of a node is the number of edges from the node to the tree's root node.
-        17. Forest – A forest is a set of n ≥ 0 disjoint trees.
+    1. **Root** – The top node in a tree.
+    2. **Parent** – The converse notion of child.
+    3. **Siblings** – Nodes with the same parent.
+    4. **Descendant** – a node reachable by repeated proceeding from parent to child.
+    5. **Ancestor** – a node reachable by repeated proceeding from child to parent.
+    6. **Leaf** – a node with no children.
+    7. **Internal node** – a node with at least one child.
+    8. **External node** – a node with no children.
+    9. **Degree** – number of sub trees of a node.
+    10. **Edge** – connection between one node to another.
+    11. **Path** – a sequence of nodes and edges connecting a node with a descendant.
+    12. **Level** – The level of a node is defined by 1 + the number of connections between the node and the root.
+    14. **Height of tree** –The height of a tree is the number of edges on the longest downward path between the root and a leaf.
+    15. **Height of node** –The height of a node is the number of edges on the longest downward path between that node and a leaf.
+    16. **Depth** –The depth of a node is the number of edges from the node to the tree's root node.
+    17. **Forest** – A forest is a set of n ≥ 0 disjoint trees.
 11. Types of Trees
-        1. N-Ary Tree
-        2. Binary Tree
-        3. Binary Search Tree
-        4. AVL Tree
-        5. Red Black Tree
+    1. N-Ary Tree
+    2. Binary Tree
+    3. Binary Search Tree
+    4. AVL Tree
+    5. Red Black Tree
