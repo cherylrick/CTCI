@@ -37,4 +37,20 @@
     3. The catch block contains code that is executed if and when the exception handler is invoked. The catch block has the argument of syntax **'ExceptionType name'**.
         1. The argument type, **ExceptionType**, declares the type of exception that the handler can handle and must be the name of a class that inherits from the Throwable class. 
         2. The handler can refer to the exception with **name**.
+11. Exception handlers can do more than just print error messages or halt the program. They can do 
+    1. Error recovery
+    2. Prompt the user to make a decision
+    3. Propagate the error up to a higher-level handler using chained exceptions
+12. The  **finally block** always executes when the try block exits. 
+    1. The finally block is **executed even if an unexpected exception occurs**. 
+    2. It avoids accidental bypassing of cleanup code by a **return**, **continue**, or **break**. 
+    3. It ia good practice to put cleanup code in a finally block .
+13. 
+
+
+
+
+In Java SE 7 and later, a single catch block can handle more than one type of exception. This feature can reduce code duplication and lessen the temptation to catch an overly broad exception.
+
+
         
