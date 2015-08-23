@@ -21,5 +21,7 @@
 
 
 #PROBLEMS
-Find the factorial of a number
-Perform Binary Search on a Sorted Array
+1. Find the factorial of a number
+2. Perform Binary Search on a Sorted Array
+3. List all permutations of a String
+4. List all combinations/Subsets of a String
