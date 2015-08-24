@@ -24,7 +24,13 @@ public class Tree {
 
         //Tree Height
         TreeProperties tree = new TreeProperties();
-        System.out.println("\n\nTree Height: "+tree.getTreeHeight(root));
+        System.out.println("\n\nTree Height: " + tree.getTreeHeight(root));
+
+        //Search Tree Node in Binary Search Tree
+        SearchBST search = new SearchBST();
+        System.out.println("Smallest Node: "+search.findSmallestNode(root));
+        System.out.println("Largest Node: "+search.findLargestNode(root));
+
 
     }
 
