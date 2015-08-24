@@ -45,12 +45,25 @@
     1. The finally block is **executed even if an unexpected exception occurs**. 
     2. It avoids accidental bypassing of cleanup code by a **return**, **continue**, or **break**. 
     3. It ia good practice to put cleanup code in a finally block .
-13. 
-
-
-
-
-In Java SE 7 and later, a single catch block can handle more than one type of exception. This feature can reduce code duplication and lessen the temptation to catch an overly broad exception.
-
-
+13. The **finally block does not execute** when
+    1. JVM exits while the try or catch code is being executed
+    2. If the thread executing the try or catch code is interrupted or killed
+14. The **finally block** is a **key tool** for **preventing resource leaks**. 
+15. Sometimes it is better to let a method further up the call stack handle the exception. Thus the method can throw the exception from it using **throws** keyword.
+16. The **throw** statement can be used to throw an exception.
+17. Exception handlers can print the stack trace. 
+18. A stack trace provides information on the execution history of the current thread and lists the names of the classes and methods that were called at the point when the exception occurred. 
+19. A stack trace is a useful debugging tool that you'll normally take advantage of when an exception has been thrown.
+20. You can create your own exception classes
+21. **Advantages of Exceptions:**
+    1. Helps separate error handling code from regular code.
+    2. Errors can be propagated Up the Call Stack
+    3. Helps in Grouping and Differentiating Error Types
+22. Important Points:
+    1. The try statement should contain at **least one catch block or a finally block** and **may have multiple catch blocks**.
+    2. Place the more specific catch blocks before the general catch blocks. For example, place 'IOException' exception handler before the more general 'Exception' exception handler.
+    3. Use the e.printStackTrace(System.out) to print the stack trace to output. 
+23. In Java SE 7 and later 
+    1. A **single catch block can handle more than one type of exception**. This feature can reduce code duplication and lessen the temptation to catch an overly broad exception.
+    2. The **try-with-resources statement ensures that each resource is closed at the end of the statement**. Any object that implements java.lang.AutoCloseable, which includes all objects which implement java.io.Closeable, can be used as a resource.
         
