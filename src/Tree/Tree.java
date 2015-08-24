@@ -5,26 +5,30 @@ package Tree;
  */
 public class Tree {
 
-    // Kavin - root need not be static here. risky and subjective to modifications by multiple code
-    static Node root = null;
+    Node root = null;
 
     public static void main(String[] args){
 
         int[] TreeNodeValues = {20, 30, 10, 25, 17, 8};
 
         //Creating a Binary Search Tree
-        // Kavin - variable names should always begin with a small letter
-        Tree BST = new Tree();
-        BST.createBinarySearchTree(TreeNodeValues);
-        // Kavin - why is treeorder a separate class? nothing wrong in it though
-        TreeOrder visit = new TreeOrder();
-        visit.inorder(root);
+        Tree bst = new Tree();
+        Node root = bst.createBinarySearchTree(TreeNodeValues);
+
+        //Tree Traversal
+        Traversal visit = new Traversal();
+        System.out.println("Tree Traversal");
+        System.out.println("In-Order: "); visit.inOrder(root);
+        System.out.println("\nPre-Order: "); visit.preOrder(root);
+        System.out.println("\nPost-Order: "); visit.postOrder(root);
+
+        //Tree Height
+        TreeProperties tree = new TreeProperties();
+        System.out.println("\n\nTree Height: "+tree.getTreeHeight(root));
 
     }
 
-    void createBinarySearchTree(int[] TreeNodeValues){
-
-        // Kavin - whenever you have a method named as create*Tree(), it is best if it always returns the root created.
+    Node createBinarySearchTree(int[] TreeNodeValues){
 
         for(int nodeValue : TreeNodeValues){
 
@@ -35,7 +39,7 @@ public class Tree {
                 //Checking if the node is already present in the tree
                 if (root.value == nodeValue) {
                     System.out.println("Node is already in Tree");
-                    return;
+                    return null;
                 }
 
                 //Creating the node for the nodeValue and inserting it
@@ -44,41 +48,36 @@ public class Tree {
                 putNode(node, root);
             }
         }
+
+        return root;
     }
 
     //Function to put the new node in the correct position in the Binary Search Tree
     void putNode(Node node, Node root){
-        // Kavin - edge condition has to be checked for null
-        Node current = root;
 
-        if(node.value < current.value){
+        //Check if root is null
+        if(root == null || node == null) {
 
-            if(current.left != null){
-                // Kavin -  instead of saying current = current.left, why not putNode(node, current.left)?
-                current = current.left;
-                putNode(node, current);
+            System.out.println("Error: Root or Node is null");
+            return;
+
+        }
+
+        if(node.value < root.value){
+
+            if(root.left != null){
+                putNode(node, root.left);
             }
             else
-                current.left = node;
-
+                root.left = node;
         }
         else {
 
-            if(current.right != null){
-                // same as above
-                current = current.right;
-                putNode(node, current);
+            if(root.right != null){
+                putNode(node, root.right);
             }
             else
-                current.right = node;
+                root.right = node;
         }
     }
-
-    //Function to print the height of the tree
-    void findTreeHeight(Node root){
-
-
-    }
-
-
 }
