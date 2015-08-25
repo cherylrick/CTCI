@@ -12,11 +12,11 @@ public class SearchBST {
      * @param root
      * @return
      */
-    int findSmallestNode(Node root){
+    Integer findSmallestNode(Node root){
 
         //Checking if the Binary Search Tree exists
         if(root == null)
-            return -1;
+            return null;
 
         while(root.left != null)
             root = root.left;
@@ -31,11 +31,11 @@ public class SearchBST {
      * @param root
      * @return
      */
-    int findLargestNode(Node root){
+    Integer findLargestNode(Node root){
 
         //Checking if the Binary Search Tree exists
         if(root == null)
-            return -1;
+            return null;
 
         while(root.right != null)
             root = root.right;
