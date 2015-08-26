@@ -1,6 +1,7 @@
 package ArraysAndStrings;
-import java.util.Set;
-import java.util.HashSet;
+import java.util.HashMap;
+//import java.util.Set;
+//import java.util.HashSet;
 
 /**
  * Created by nithyapari on 8/25/15.
@@ -46,26 +47,79 @@ public class Anagram {
         s1 = s1.toLowerCase();
         s2 = s2.toLowerCase();
 
-        // Why HashSet?
-        // This Collection class allows storage of only unique characters
-        Set<Character> set = new HashSet<Character>();
+
+        /** Why HashSet?
+         * This Collection class allows storage of only unique characters
+         * Why not HashSet? Will not work for input strings having repeated characters:
+         * Example: Strings 'madam' and 'damam'.
+         * It will fail in the first for loop itself because the for loop will
+         * try to add 'a' twice
+         * Count of the characters should be maintained to address this issue
+         * HashMap can be used
+         */
+
+            /*COMMENTING OLD SOLUTION*/
+
+                    //Set<Character> set = new HashSet<Character>();
+
+                    /**
+                     * Add first string characters to Set
+                     */
+                        //  for(int i=0; i<s1Length; i++){
+                        //      set.add(s1.charAt(i));
+                        //  }
+
+                    /**
+                     * Adding second string characters to Set
+                     * If it allows the addition, then second string has new characters
+                     * Thus, they cannot be anagrams
+                     */
+                        //   for(int j=0; j<s2Length; j++){
+                        //       if(set.add(s2.charAt(j)))
+                        //           return false;
+                        //   }
 
         /**
-         * Add first string characters to Set
+         *  Using HashMap to maintain count of each character in the first String
+         *  For every character in String 1,
+         *      increment count by 1 if already present
+         *      add to map with count as 1, if not already present
+         *  For every character in String 2, decrement count by 1
          */
-        for(int i=0; i<s1Length; i++){
-            set.add(s1.charAt(i));
+        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+
+        /**
+         * Add first string characters to Hash Map and store its count
+         */
+          for(int i=0; i<s1Length; i++){
+              Character key = s1.charAt(i);
+              Integer value = map.get(key);
+
+              //Checking if Character is already present
+              if(value == null)
+                  map.put(key,1);
+              else
+                  map.put(key,value++);
+          }
+
+        /**
+         * Decrement count in Hash Map for every Character in second String
+         */
+        for(int i=0; i<s2Length; i++){
+            Character key = s2.charAt(i);
+            Integer value = map.get(key);
+
+            //Checking if Character is already present
+            if(value == null)
+                return false; //Character in Second string missing in first string, cannot be anagram
+            else
+                map.put(key,--value);
         }
 
-        /**
-         * Adding second string characters to Set
-         * If it allows the addition, then second string has new characters
-         * Thus, they cannot be anagrams
-         */
-        for(int j=0; j<s2Length; j++){
-            if(set.add(s2.charAt(j)))
+        //Check if any of the count values in the Hash Map is not 0
+        for(int value : map.values())
+            if(value !=0 )
                 return false;
-        }
 
         //All constraints crossed, so the strings are indeed anagrams of each other
         return true;
