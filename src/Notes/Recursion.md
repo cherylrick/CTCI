@@ -1,4 +1,4 @@
-#ALL ABOUT RECURSION
+#ALL ABOUT RECURSION#
 
 1. Recursion is useful for tasks that can be defined in terms of similar sub tasks. Example: **sort**, **search** and **traversal** problems
 2. **Recursive Function**
@@ -20,7 +20,7 @@
 
 
 
-#PROBLEMS
+#PROBLEMS# 
 1. Find the factorial of a number
 2. Perform Binary Search on a Sorted Array
 3. List all permutations of a String

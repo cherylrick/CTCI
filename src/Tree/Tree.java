@@ -31,6 +31,10 @@ public class Tree {
         System.out.println("Smallest Node: "+search.findSmallestNode(root));
         System.out.println("Largest Node: "+search.findLargestNode(root));
 
+        //Check if it is a Binary Search Tree
+        CheckBST check = new CheckBST();
+        check.isBST(root);
+
 
     }
 
