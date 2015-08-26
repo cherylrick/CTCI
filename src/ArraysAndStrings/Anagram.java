@@ -9,8 +9,8 @@ import java.util.HashMap;
 public class Anagram {
     public static void main(String[] args){
 
-        String s1 = "Silent";
-        String s2 = "Listen";
+        String s1 = "banana";
+        String s2 = "nanaba";
 
         Anagram check = new Anagram();
         if(check.isAnagram(s1, s2))
@@ -99,8 +99,10 @@ public class Anagram {
               if(value == null)
                   map.put(key,1);
               else
-                  map.put(key,value++);
+                  map.put(key,++value);
           }
+
+        System.out.println(map.entrySet());
 
         /**
          * Decrement count in Hash Map for every Character in second String
