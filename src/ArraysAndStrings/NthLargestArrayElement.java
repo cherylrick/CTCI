@@ -19,6 +19,13 @@ public class NthLargestArrayElement {
      */
     int getNthLargestElement(int n, int[] inputArray){
 
+        //Test Cases
+        if(n <= 0)
+            return -1;
+
+        if(inputArray.length == 0 || inputArray == null)
+            return -1;
+
         //Sort the input Array in ascending order - Uses Quick Sort
         Arrays.sort(inputArray);
 
