@@ -11,7 +11,10 @@ public class NthLargestArrayElement {
         int[] inputArray = {5,2,4,7,1,6}  ;
 
         NthLargestArrayElement find = new NthLargestArrayElement();
-        find.getNthLargestElement(2,inputArray);
+        int output = find.getNthLargestElement(2,inputArray);
+
+        if(output != -1)
+            System.out.println(output);
 
     }
 
