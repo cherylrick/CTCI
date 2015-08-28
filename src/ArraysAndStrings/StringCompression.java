@@ -23,7 +23,10 @@ public class StringCompression {
         //Get String input from user
         Scanner in = new Scanner(System.in);
         System.out.println(" Enter Input String: ");
-        System.out.print(obj.stringCompress(in.next()));
+
+        String output = obj.stringCompress(in.next());
+        if(output != null)
+        System.out.print(output);
 
 
     }
@@ -34,6 +37,7 @@ public class StringCompression {
         //Check if String is empty or null
         if( input == null || input.length() == 0){
             System.out.println("Error: Invalid String Input");
+            return null;
         }
 
         //Convert input string characters to lower case
